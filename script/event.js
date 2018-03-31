@@ -19,11 +19,16 @@ $(document).ready(function () {
             for (var m = 0; m < eventData.length; m++) {
                 var name = "";
                 var tempEvents = eventData[m].event.split("^");
-                for (var k = 0; k < tempEvents.length; k++) {
-                    if (k != 0) {
-                        name += "^";
+                if (tempEvents.length == 2) {
+                    name += eventMapName[tempEvents[0]];
+                    name += "(" + eventMapName[tempEvents[1]] + ")";
+                } else {
+                    for (var k = 0; k < tempEvents.length; k++) {
+                        if (k != 0) {
+                            name += "^";
+                        }
+                        name += eventMapName[tempEvents[k]];
                     }
-                    name += eventMapName[tempEvents[k]];
                 }
                 var start = eventData[m].start;
                 var end = eventData[m].end;

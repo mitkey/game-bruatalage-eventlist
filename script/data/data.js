@@ -12,7 +12,7 @@ var eventMapName = {
     "ysr": "原始人",
     "blsl": "部落杀狼",
     "zmsb": "招募士兵",
-    "jch": "剑齿虎"
+    "jch": "虎"
 };
 
 // 活动列表
